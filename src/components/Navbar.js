@@ -71,8 +71,8 @@ function Navbar(){
                 </div>
 
                 <div className='logo'>
-                    <h1>PUBLISHING <span>COMPANY</span></h1>
-                    <h2>BOOK PUBLISHING COMPANY</h2>
+                    <h1>Reviewing <span>COMPANY</span></h1>
+                    <h2>The Book's World</h2>
                 </div>
 
                 <div className='searchbar_container'>
