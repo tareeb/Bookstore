@@ -1,0 +1,25 @@
+.loginpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #5d8cb0ca; */
+    padding: 10%;
+    color: white;
+    gap: 20px;
+    background-image: url("../images/bookbg2.jpg") , linear-gradient(rgba(125, 125, 125, 0.3),rgba(125, 125, 125, 0.3));
+    background-blend-mode: color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.loginpage .login_header{
+    text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+    .loginpage{
+        padding: 30% 5%;
+    }
+}

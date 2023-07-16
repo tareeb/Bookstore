@@ -1,0 +1,144 @@
+.Bookcard{
+    display: flex;
+    justify-content: center;
+    background-color:#f5f4f0;
+    gap:10px;
+    transition: all 0.5s;
+}
+
+.Bookcard_image_container{
+    flex: 2;
+    position: relative;
+}
+.Bookcard_image_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.Bookcard_content{
+    flex: 1;
+    display: flex;
+    padding:2%;
+    gap: 10px;
+    flex-direction: column;
+}
+.Bookcard_content h2{
+    font-size: 14px;
+    color:#ff7a5c ; 
+}
+.Bookcard_content h1{
+    font-size: 18px;
+}
+.Bookcard_content p {
+    font-size: 16px;
+    color: #2e5b7e;
+}
+
+.Bookcard:hover{
+    background-color: #6f9dbf;
+    cursor: pointer;
+}
+.Bookcard:hover .Bookcard_content h2   ,.Bookcard:hover .Bookcard_content h1 , .Bookcard:hover .Bookcard_content p {
+    color: white;
+}
+
+.Bookcard_icons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    transition: all;
+    opacity: 0;
+}
+.Bookcard:hover .Bookcard_icons{
+    opacity: 1;
+}
+
+.Bookcard_icons div{
+    background-color: #f5f4f0;
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 10px;
+    transition: all 0.5s;
+}
+.Bookcard_icons div svg {
+    width: 20px;
+    height: 20px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.Bookcard_icons div:hover{
+    background-color: #ff7a5c;
+}
+.Bookcard_icons div:hover svg{
+    fill:white;
+}
+
+#cart:hover::before{
+    content:'Add to Cart' ;
+    transition: all 0.5s;
+    color: rgba(255, 255, 255, 0.748);
+    font-size:14px;
+    width: 80px;
+    text-align: center;
+    padding:2px;
+    background-color: rgba(0, 0, 0, 0.832);
+    position: absolute;
+    top: 18px;
+    right: 45px;
+}
+
+#like:hover::before{
+    content:'Add to Wishlist' ;
+    transition: all 0.5s;
+    color: rgba(255, 255, 255, 0.748);
+    font-size:14px;
+    width: 100px;
+    text-align: center;
+    padding:2px;
+    background-color: rgba(0, 0, 0, 0.832);
+    position: absolute;
+    top: 68px;
+    right: 45px;
+}
+
+#search:hover::before{
+    content:'Quick View' ;
+    transition: all 0.5s;
+    color: rgba(255, 255, 255, 0.748);
+    font-size:14px;
+    width: 80px;
+    text-align: center;
+    padding:2px;
+    background-color: rgba(0, 0, 0, 0.832);
+    position: absolute;
+    top: 118px;
+    right: 45px;
+}
+
+#compare:hover::before{
+    content:'Compare' ;
+    transition: all 0.5s;
+    color: rgba(255, 255, 255, 0.748);
+    font-size:14px;
+    width: 60px;
+    text-align: center;
+    padding:2px;
+    background-color: rgba(0, 0, 0, 0.832);
+    position: absolute;
+    top: 168px;
+    right: 45px;
+}
+
+
+
+

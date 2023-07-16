@@ -1,0 +1,21 @@
+.Request-Page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px 0px 40px 0px;
+    background-color: rgb(231, 228, 231);
+}
+
+.Request-Page a , a.login ,.Request-Page button {
+    border: 2px solid black;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 65, 118, 0.8);
+}
+
+.Request-Page button:hover {
+    cursor: pointer;
+}

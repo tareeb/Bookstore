@@ -1,0 +1,169 @@
+.bookpreview_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.bookpreview{
+    max-width: 400px;
+}
+
+.preview_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.preview_button button{
+    padding: 10px 20px;
+    border: 2px solid rgb(0, 68, 93);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.5s;
+    width: 100%;
+}
+
+.bookreviews{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+}
+
+.reviews{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.review.input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review.input textarea {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 18px;
+    margin: 5px;
+    padding: 10px 20px;
+}
+
+.review{
+   padding: 10px;
+   background-color: rgba(0, 138, 180, 0.638);
+   border: 2px solid black;
+   border-radius: 20px;
+   transition: all 0.3s;
+}
+
+.review h1{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.comment{
+    padding: 10px;
+    background-color: rgba(194, 194, 194, 0.284);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.comment.menu{
+    display:flex ; 
+    gap: 10px;
+}
+
+.comment.menu input{
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.comment.menu button{
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.comment.menu button:hover{
+    cursor: pointer;
+    background-color: rgb(0, 68, 93);
+    color: white;
+}
+
+.reviews_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+.reviews_button button , .readmore-button{
+    padding: 5px 10px;
+    border: 2px solid rgb(0, 68, 93);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 5px 0px;
+    transition: all 0.5s;
+}
+
+.reviews_button button:hover , .readmore-button:hover , .preview_button button:hover{
+    background-color: rgba(0, 68, 93, 0.8);
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+    .bookpreview_container{
+        flex-direction: column;
+    }
+
+    textarea {
+        width: 300px;
+    }
+
+    .bookreviews{
+        padding: 30px;
+    }
+
+    .bookpreview_container{
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    
+    textarea {
+        width: 200px;
+    }
+
+    .bookreviews{
+        padding: 20px;
+    }
+
+    .bookpreview_container{
+        padding: 20px;
+    }
+
+}

@@ -1,0 +1,30 @@
+.pageintro{
+    min-height: 40vh;
+    background-image: url("../images/bg_5.webp") , linear-gradient(rgba(200, 200, 200, 0.3),rgba(200, 200, 200, 0.3));
+    background-blend-mode: color;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.pageintro h1{
+    font-size: 40px;
+}
+
+.pageintro p{
+    color: rgba(0,0,0,.7);
+}
+
+p.Page_intro{
+    padding: 0px 50px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(1, 14, 29);
+}

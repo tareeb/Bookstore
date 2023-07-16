@@ -1,0 +1,419 @@
+.herosection {
+    background-image: url('https://preview.colorlib.com/theme/publishingcompany/images/bg_1.jpg.webp');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero_content{
+    padding: 10% 0;
+    padding-left: 10%;
+    padding-right: 35%;
+
+}
+.hero_content h1{
+    font-size: 58px;
+    font-weight:400;
+    margin-bottom: 10px;
+}
+.hero_content p {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.HeroButtons{
+    margin-top:20px ;
+    display: flex;
+    gap: 10px;
+}
+.HeroButtons button{
+    padding: 20px;
+    border: transparent;
+    transition: all 0.5s;
+}
+.HeroButtons button a{
+    text-decoration: none;
+    font-weight: bold;
+}
+#btn1{
+    background-color: #2c6c9d;
+}#btn1 a{
+    color: white;
+}
+
+#btn2{
+    background-color: white;
+}#btn2 a{
+    color: black;
+}
+
+#btn1:hover a{
+    color: black;
+}#btn1:hover{
+    background-color: #6f9dbf;
+}
+#btn2:hover a{
+    color: white;
+}#btn2:hover{
+    background-color: rgb(49, 49, 49);
+}
+
+/* 
+//////////////////////////////////////////////////////////////////////// */
+.service{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.circle{
+    width: 150px;
+    min-height: 150px;
+    background-color: #f5f4f0;
+    border-radius: 50%;
+    transition: all 0.5s;
+    position: relative;
+}
+.smallcircle{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    width: 40px;
+    min-height: 40px;
+    background-color: #ff7a5c;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.5s;
+}
+.circle svg{
+    position: relative;
+    z-index: 2;
+    min-width:50px;
+    min-height: 50px;
+    top:40px;
+}
+.Service_Container{
+    padding:0 10% ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transform: translateY(-20%);
+}
+.service h1{
+    font-size: 20px;
+}
+
+.service:hover .smallcircle{
+    background-color:#f5f4f0 ;
+    left:60px;
+}
+.service:hover .circle{
+    background-color: #6f9dbf;
+}
+
+/* #service1::before{
+    content: "\f100" ; 
+    position: relative;
+    top: 10px;
+    left: 10px;
+    background-color: aqua;
+    width: 10px;
+    height: 10px;
+}
+ */
+/* 
+///////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.statssection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 13%;
+    background-color: #f5f4f0;
+}
+.statssection div p {
+    color: rgba(0, 0, 0, 0.3);
+}
+.statssection div{
+    text-align: center;
+}
+
+
+/* 
+//////////////////////////////////////////////////////////////////////////////////// */
+
+.welcomesection{
+    padding: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome_image{
+    min-width: 50%;
+}
+.welcome_image img{
+    width: 100%;
+}
+.welcome_content{
+    min-width: 50%;
+    padding-left: 5%;
+}
+.welcome_content h2{
+    font-size: 18px;
+    color: #ff7a5c;
+}
+.welcome_content h1{
+    margin-bottom: 10px;
+}
+.welcome_content p {
+    color: gray;
+    margin-bottom: 20px;
+}
+.welcome_content  a{
+    background-color: #2c6c9d;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+.welcome_content a:hover{
+    background-color: #6f9dbf;
+}
+
+/* ////////////////////////////////////////////////////////// */
+
+.Bookssection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    gap: 20px;
+}
+
+
+/* //////////////////////////////////////////////////////// */
+
+.Testimonialsection{
+    background-image: url('https://preview.colorlib.com/theme/publishingcompany/images/xbg_4.jpg.pagespeed.ic.uyyupfLttr.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #6f9dbf;
+    background-blend-mode: soft-light;
+    background-size: cover;
+
+    text-align: center;
+    color: rgba(255, 255, 255, 0.879);
+}
+
+.Testimonialsection2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://preview.colorlib.com/theme/publishingcompany/images/xbg_4.jpg.pagespeed.ic.uyyupfLttr.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #6f9dbf;
+    background-blend-mode: soft-light;
+    background-size: cover;
+
+    height: 400px;
+    
+    color: rgba(255, 255, 255, 0.879);
+}
+
+.TestimonialHeader{
+   padding-top: 10% ;
+}
+.TestimonialHeader h1{
+    margin-bottom: 20px;
+}
+.TestimonialHeader h2{
+    font-size: 50px;
+}
+
+.TestimonialContainer{
+        overflow: hidden; 
+        padding: 5% 0%;
+        margin: 0% 10%;
+        transition: all 0.5s;
+}
+
+.testimonialslider{
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        transition: all 0.5s;
+        position: relative;
+        right:0 ; 
+        
+}
+
+
+.Testimonial p , .Testimonial h1 , .Testimonial h2{
+    color: black;
+}
+
+.Testimonial{
+    min-width: 100%;    
+    position: relative;
+    background-color: white;
+    padding: 5% 5%;
+    box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.3 );
+    overflow: visible;
+
+}
+.clientinfo{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.clientinfo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.clientinfo h1{
+    font-size:18px;
+} 
+.clientinfo h2{
+    font-size:14px;
+    color: rgba(0, 0, 0, 0.741);
+} 
+.testimonialicon{
+    position: absolute;
+    top: -20px;
+    background-color: #6f9dbf;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial_btn_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-bottom: 20px;
+}
+
+.testimonial_btn_container button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.898);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.testimonial_btn_container button:hover{
+    background-color: #2c6c9d;
+}
+.testimonial_btn_container svg{
+    fill:#6f9dbf;
+    width: 20px;
+    height: 20px;
+}
+.testimonial_btn_container button:hover svg{
+    fill:white;
+}
+
+
+/* //////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+/* when minimum screen reacehs 600 */
+@media screen and (max-width: 800px) {
+    .hero_content h1{
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero_content h1{
+        font-size: 40px;
+    }
+    .HeroButtons{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 750px) {
+   .Service_Container{
+    flex-direction: column;
+    margin-top: 20px;
+    transform: translateY(0);
+    margin-bottom: 30px;
+   }
+
+   .statssection{
+    flex-direction: column;
+   }
+   .statssection div{
+    margin-bottom: 30px;
+    text-align: center;
+   }
+
+
+   .Bookssection{
+    flex-direction: column;
+    padding: 10%;
+   }
+   .Bookssection div{
+    margin-bottom: 20px;
+   }
+}
+
+@media screen and (max-width: 820px) {
+    .statssection div p{
+        font-size: 14px;
+    }
+ }
+
+ @media screen and (max-width: 700px) {
+    .welcome_image{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .welcome_content h2{
+        font-size: 18px;
+    }
+    .welcome_content h1{
+        font-size: 22px;
+    }
+    .welcome_content p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .Testimonial p{
+        font-size: 14px;
+    }
+    .clientinfo h1{
+        font-size:16px;
+    } 
+    .clientinfo h2{
+        font-size:12px;
+    } 
+}
