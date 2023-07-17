@@ -29,6 +29,7 @@ function Search(){
     );
 }
 
+const storedToken = localStorage.getItem('token');
 
 function Navbar(){
     const [linkclasses, setlinkclasses] = useState(["link_container"]);
@@ -88,9 +89,12 @@ function Navbar(){
                     <li> <Link to="#ABOUT" onClick={loader}> ABOUT </Link></li>
                     <li> <Link to="#TOP SELLER" onClick={loader}> TOP SELLER </Link></li>
                     <li> <Link to="#bookstore" onClick={loader}> BOOKS </Link></li>
-                    <li> <Link to="/login" onClick={loader}> LOGIN </Link></li>
-                    <li> <Link to="/signup" onClick={loader}> SIGNUP </Link></li>
-                    <li> <Link to="/Logout" onClick={loader}> LOGOUT </Link></li>
+                    {
+                        storedToken ?
+                        <li> <Link to="/Logout" onClick={loader}> LOGOUT </Link></li> :
+                        <li> <Link to="/login" onClick={loader}> LOGIN </Link></li>   
+                    }
+                    {!storedToken && <li> <Link to="/signup" onClick={loader}> SIGNUP </Link></li>}
 
                 </ul>
 
@@ -108,9 +112,13 @@ function Navbar(){
                         <li> <Link to="#ABOUT" onClick={loader}> ABOUT </Link></li>
                         <li> <Link to="#TOP SELLER" onClick={loader}> TOP SELLER </Link></li>
                         <li> <Link to="#bookstore" onClick={loader}> BOOKS </Link></li>
-                        <li> <Link to="/login" onClick={loader}> LOGIN </Link></li>
-                        <li> <Link to="/signup" onClick={loader}> SIGNUP </Link></li>
-                        <li> <Link to="/Logout" onClick={loader}> LOGOUT </Link></li>
+                        {
+                        storedToken ?
+                            <li> <Link to="/Logout" onClick={loader}> LOGOUT </Link></li> :
+                            <li> <Link to="/login" onClick={loader}> LOGIN </Link></li>   
+                        }
+                        {!storedToken && <li> <Link to="/signup" onClick={loader}> SIGNUP </Link></li>}
+                        
                     </ul>
                 </div>
             </div>

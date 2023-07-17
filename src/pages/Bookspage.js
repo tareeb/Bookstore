@@ -2,6 +2,9 @@ import './Bookspage.css'
 import Pageintro from '../components/Pageinto';
 import Bookcard from '../components/bookcard';
 import { API_BASE_URL } from '../apiConfig';
+import Review from '../components/Review';
+import RequestStatus from '../components/RequestStatus';
+
 
 import { useSearchParams } from 'react-router-dom';
 
@@ -13,113 +16,113 @@ const accessToken = localStorage.getItem('access');
 const user_id = localStorage.getItem('user_id');
 
 
-const Review = ({username , text , id}) => {
+// const Review = ({username , text , id}) => {
 
-    const [showFullText, setShowFullText] = useState(false);
-    const [comments , setComments] = useState([]);
-    const [showCommentMenu , setShowCommentMenu] = useState(false);
-    const [reviewID , setreviewID] = useState(-1)
+//     const [showFullText, setShowFullText] = useState(false);
+//     const [comments , setComments] = useState([]);
+//     const [showCommentMenu , setShowCommentMenu] = useState(false);
+//     const [reviewID , setreviewID] = useState(-1)
 
-    const [inputValue, setInputValue] = useState('');
+//     const [inputValue, setInputValue] = useState('');
 
-    const handleChange = (event) => {
-        setInputValue(event.target.value);
-    };
+//     const handleChange = (event) => {
+//         setInputValue(event.target.value);
+//     };
 
 
-    const handleClick = () => {
-        showFullText ? setShowFullText(false) : setShowFullText(true);
-    };
+//     const handleClick = () => {
+//         showFullText ? setShowFullText(false) : setShowFullText(true);
+//     };
 
-    const getcomments = () => {
-        fetch(`${API_BASE_URL}/getcommentbyreview/${id}/`)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                setComments(data);
-            })
-            .catch(error => {
-                console.error(error);
-            });
-    }
+//     const getcomments = () => {
+//         fetch(`${API_BASE_URL}/getcommentbyreview/${id}/`)
+//             .then(response => response.json())
+//             .then(data => {
+//                 console.log(data);
+//                 setComments(data);
+//             })
+//             .catch(error => {
+//                 console.error(error);
+//             });
+//     }
 
-    const addcomment = async () => {
-        if (inputValue){
+//     const addcomment = async () => {
+//         if (inputValue){
 
-            const data = { "user" : user_id , "review" : reviewID , "text" : inputValue}
-            console.log(data , accessToken);
+//             const data = { "user" : user_id , "review" : reviewID , "text" : inputValue}
+//             console.log(data , accessToken);
 
-            try {
-            const response = await fetch(`${API_BASE_URL}/addcomment/`, {
-                method: 'POST',
-                headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${accessToken}`,
-                },
-                body: JSON.stringify(data),
-            });
+//             try {
+//             const response = await fetch(`${API_BASE_URL}/addcomment/`, {
+//                 method: 'POST',
+//                 headers: {
+//                 'Content-Type': 'application/json',
+//                 Authorization: `Bearer ${accessToken}`,
+//                 },
+//                 body: JSON.stringify(data),
+//             });
         
-            if (response.ok) {
-                const data = await response.json();
-                console.log('Review added successfully:', data);
-                getcomments();
-            } else {
-                const errorData = await response.json();
-                console.log('Failed to add review:', errorData);
-            }
-            } catch (error) {
-            console.error('An error occurred:', error);
-            }
-        }
-    }
+//             if (response.ok) {
+//                 const data = await response.json();
+//                 console.log('Review added successfully:', data);
+//                 getcomments();
+//             } else {
+//                 const errorData = await response.json();
+//                 console.log('Failed to add review:', errorData);
+//             }
+//             } catch (error) {
+//             console.error('An error occurred:', error);
+//             }
+//         }
+//     }
 
 
-    return (
-        <div className='review'>
-            <h1>{username}</h1>
-            {!showFullText && <p className='halftext'>{text.substring(0,200)}......</p>}
-            {showFullText && <p className='fulltext'>{text}</p>}
-            {!showFullText && <button className='readmore-button' onClick={handleClick}>Read More</button>}
+//     return (
+//         <div className='review'>
+//             <h1>{username}</h1>
+//             {!showFullText && <p className='halftext'>{text.substring(0,200)}......</p>}
+//             {showFullText && <p className='fulltext'>{text}</p>}
+//             {!showFullText && <button className='readmore-button' onClick={handleClick}>Read More</button>}
             
-            { showFullText && <div className='reviews_button'> 
-                <button className="button" onClick={getcomments}>
-                    Comments
-                </button> 
+//             { showFullText && <div className='reviews_button'> 
+//                 <button className="button" onClick={getcomments}>
+//                     Comments
+//                 </button> 
 
-                <button className='button' onClick={() => { setShowCommentMenu(true); setreviewID(id) }}>
-                    Add Comment
-                </button>
+//                 <button className='button' onClick={() => { setShowCommentMenu(true); setreviewID(id) }}>
+//                     Add Comment
+//                 </button>
 
-                <button className='button'  onClick={handleClick}>
-                    Close
-                </button>
+//                 <button className='button'  onClick={handleClick}>
+//                     Close
+//                 </button>
 
-            </div>}
+//             </div>}
 
-            {
-                showFullText && showCommentMenu && <div className='comments'>
-                        <div className='comment menu'>
-                            <input type="text" value={inputValue} onChange={handleChange} />
-                            <button onClick={addcomment}>Submit</button>
-                        </div>
-                    </div>
-            }
+//             {
+//                 showFullText && showCommentMenu && <div className='comments'>
+//                         <div className='comment menu'>
+//                             <input type="text" value={inputValue} onChange={handleChange} />
+//                             <button onClick={addcomment}>Submit</button>
+//                         </div>
+//                     </div>
+//             }
 
-            {comments && showFullText && <div className='comments'>
+//             {comments && showFullText && <div className='comments'>
 
-                {comments.map((comment , index) => (
-                    <div className='comment' key={index}>
-                        <h1>{comment.username}</h1>
-                        <p>{comment.text}</p>
-                    </div>
-                ))}
+//                 {comments.map((comment , index) => (
+//                     <div className='comment' key={index}>
+//                         <h1>{comment.username}</h1>
+//                         <p>{comment.text}</p>
+//                     </div>
+//                 ))}
 
             
-            </div>}
+//             </div>}
 
-        </div>
-    );
-}
+//         </div>
+//     );
+// }
 
 function Bookspage() {
 
@@ -127,6 +130,10 @@ function Bookspage() {
     if(!storedToken){
         window.location.href = "/loginrequest";
     }
+
+                
+    const [requestStatus, setRequestStatus] = useState(null);
+    const [requestMessage, setRequestMessage] = useState(null);
     
     const [showReviewMenu , setShowReviewMenu] = useState(false);
     const [bookid , setBookID] = useState(-1)
@@ -200,9 +207,93 @@ function Bookspage() {
 
       };
 
+    const placeOrder = async () => {
+        const data = { "user" : user_id , "book" : id }
+        console.log(data);
+            try {
+            
+                setRequestMessage('Placing Order');
+                setRequestStatus('loading');
+
+                const response = await fetch(`${API_BASE_URL}/addorder/`, {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${accessToken}`,
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                console.log(response);
+            
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log('Order Placed', data);
+                    setRequestMessage('Order Placed');
+                    setRequestStatus('success');
+                } else {
+                    const errorData = await response.json();
+                    console.log('Failed to add order: ', errorData);
+                    setRequestMessage('Failed to Place Order');
+                    setRequestStatus('error');
+                }
+
+            } catch (error) {
+
+                setRequestMessage('Network Error');
+                setRequestStatus('error');
+
+            console.error('An error occurred:', error);
+            }
+    };
+
+    const addfav = async () => {
+        const data = { "user" : user_id , "book" : id }
+        console.log(data);
+            try {
+            
+                setRequestMessage('Adding to Favourite');
+                setRequestStatus('loading');
+
+                const response = await fetch(`${API_BASE_URL}/addfav/`, {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${accessToken}`,
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                console.log(response);
+            
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log('Added to Fav', data);
+                    setRequestMessage('Added to Fav');
+                    setRequestStatus('success');
+                } else {
+                    const errorData = await response.json();
+                    console.log('Failed to add order: ', errorData);
+                    setRequestMessage('Failed to Add Fav');
+                    setRequestStatus('error');
+                }
+
+            } catch (error) {
+
+                setRequestMessage('Network Error');
+                setRequestStatus('error');
+
+            console.error('An error occurred:', error);
+            }
+    };
+
+
    
     return(
         <div className='Bookspage'>
+
+            <RequestStatus status={requestStatus} message={requestMessage} />
+
             <Pageintro 
                 pagename={"Book Center"} 
                 intro={"Here You can read and write reviews and summaries, opinions and thoughts about the books."}
@@ -224,10 +315,21 @@ function Bookspage() {
                     </div>
 
                     <div className='preview_button'>
+
                         <button
-                            onClick={() => {setShowReviewMenu(true) ; setBookID(id)}}
+                            onClick={() => {
+                                showReviewMenu ? setShowReviewMenu(false) : setShowReviewMenu(true) ;
+                                setBookID(id) ;
+                            }}
                         >Add Review</button>
-                        <button>Add to Favourite</button>
+                        
+                        <button
+                            onClick={placeOrder}
+                        >Buy Book</button>
+
+                        <button
+                            onClick={addfav}
+                        >Add to Favourite</button>
                     </div>
                 </div>
 

@@ -21,7 +21,11 @@ function UserPage() {
     }
 
     const [booksdata , setbooksdata] = useState([]) ; 
+    const [favdata , setfavdata] = useState([]) ;
     const [bookstoshow , setbookstoshow] = useState([]); 
+
+    const [fav , setFav] = useState(false);
+    const [favtext , setFavtext] = useState("Show Favorites") ;
 
     useEffect(() => {
 
@@ -34,6 +38,25 @@ function UserPage() {
         }
 
         getbooks();
+
+        const getfavbooks = async () => {
+
+            try {
+    
+                const response = await fetch(`${API_BASE_URL}/getallfav/${localStorage.getItem('user_id')}/`)
+                const data = await response.json()
+                console.log("fav : " , data)
+                
+                setfavdata(data);
+            } catch (error) {
+                console.error('An error occurred:', error);
+            }
+                
+        }
+
+        getfavbooks();
+            
+            
         
         
     }, [])
@@ -80,9 +103,39 @@ function UserPage() {
             });
     }
 
+    function selectFavoriteBooks(booksData, favoriteData) {
+        // Extract the book IDs from the favorite data
+        const favoriteBookIds = favoriteData.map((favorite) => favorite.book);
+      
+        // Filter the books data to select only the favorite books
+        const favoriteBooks = booksData.filter((book) =>
+          favoriteBookIds.includes(book.id)
+        );
+      
+        return favoriteBooks;
+      }
+
+    function getfavbooks(){
+        if(fav){
+            setFav(false);
+            setFavtext("Show Favorites");
+            setbookstoshow(booksdata.slice(startindex , endindex)) ;
+        }else{
+            setFav(true);
+            setFavtext("Show All");
+            setbookstoshow(selectFavoriteBooks(booksdata , favdata));
+        }
+    }
+
+    
+
     return(
         <div className='Bookspage'>
-            <Pageintro pagename={"Welcome"}></Pageintro>
+            <Pageintro pagename={"Welcome"}  intro={"Here you can view all the books Available"}></Pageintro>
+            
+            <div className="Favbutton">
+                <button onClick={getfavbooks}>{favtext}</button>
+            </div>
 
             <div className='bookslist' ref={booklistRef}>
                 { console.log(bookstoshow)}

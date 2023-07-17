@@ -1,5 +1,28 @@
+.Favbutton{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.Favbutton button{
+    border: 1px solid black;
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgba(25, 91, 146, 0.8);   
+    transition: all 0.5s; 
+}
+
+.Favbutton button:hover{
+    cursor: pointer;
+    background-color: rgb(233, 230, 233);
+    color: black;  
+}
+
+
 .bookslist{
-    padding: 100px 10%;
+    padding: 40px;
     display: grid;
     grid-template-columns: auto auto auto ;
     gap: 20px;

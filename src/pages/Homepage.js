@@ -34,48 +34,36 @@ function Testimonial({comment , name , position , imagesrc}) {
   
 const Testimonialdata = [
     {
-        comment : "1Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", 
+        comment : "Really Loved the idea, I can now share my thoughts with other users and together we can uncover the secrets of the books", 
         name : "Roger Scott",
+        position : "Reader",
+        imagesrc : "https://preview.colorlib.com/theme/publishingcompany/images/person_2.jpg.webp"
+    },
+    {
+        comment : "Good Books and Good Reviews and good people with good ideas. I really loved the idea and I hope that this will help me to get to the secrets of the books", 
+        name : "David Scott",
+        position : "Student",
+        imagesrc : "https://preview.colorlib.com/theme/publishingcompany/images/person_2.jpg.webp"
+    },
+    {
+        comment : "Great initiative and great idea, I really liked it and loved it and I hope that this will help me to get to the secrets of the books", 
+        name : "Scott DavidSon",
+        position : "Teacher",
+        imagesrc : "https://preview.colorlib.com/theme/publishingcompany/images/person_2.jpg.webp"
+    },
+    {
+        comment : "Here I really got to know the secrets of the books and I really loved it and I hope that this will help me to get to the secrets of the books", 
+        name : "Dan Scottish",
         position : "Marketing Manager",
         imagesrc : "https://preview.colorlib.com/theme/publishingcompany/images/person_2.jpg.webp"
     },
     {
-        comment : "2Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", 
-        name : "Roger Scott",
-        position : "Marketing Manager",
-        imagesrc : "https://preview.colorlib.com/theme/publishingcompany/images/person_2.jpg.webp"
-    },
-    {
-        comment : "3Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", 
-        name : "Roger Scott",
-        position : "Marketing Manager",
-        imagesrc : "https://preview.colorlib.com/theme/publishingcompany/images/person_2.jpg.webp"
-    },
-    {
-        comment : "4Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", 
-        name : "Roger Scott",
-        position : "Marketing Manager",
-        imagesrc : "https://preview.colorlib.com/theme/publishingcompany/images/person_2.jpg.webp"
-    },
-    {
-        comment : "5Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", 
-        name : "Roger Scott",
-        position : "Marketing Manager",
-        imagesrc : "https://preview.colorlib.com/theme/publishingcompany/images/person_2.jpg.webp"
-    }, 
-    {
-        comment : "6Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", 
-        name : "Roger Scott",
-        position : "Marketing Manager",
-        imagesrc : "https://preview.colorlib.com/theme/publishingcompany/images/person_2.jpg.webp"
-    },
-    {
-        comment : "7Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", 
-        name : "Roger Scott",
-        position : "Marketing Manager",
+        comment : "I hope this get successfull , I hope I can be a valubale part of this community and I hope that this will help me to get to the secrets of the books", 
+        name : "King Edward",
+        position : "CEO of Books.com",
         imagesrc : "https://preview.colorlib.com/theme/publishingcompany/images/person_2.jpg.webp"
     }
- 
+
 ]
 
 

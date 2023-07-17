@@ -4,6 +4,7 @@
     background-color:#f5f4f0;
     gap:10px;
     transition: all 0.5s;
+    max-width: 400px;
 }
 
 .Bookcard_image_container{
