@@ -1,7 +1,7 @@
 import './Homepage.css'
 import {Link} from 'react-router-dom';
 import { useState,useRef ,useEffect} from 'react';
-
+import { API_BASE_URL } from '../apiConfig';
 import {GiUnicorn} from 'react-icons/gi'  
 import {GiSpellBook} from 'react-icons/gi'
 import {BsHouse} from 'react-icons/bs'
@@ -83,7 +83,7 @@ function Homepage() {
 
         const getbooks = async () => {
 
-            const response = await fetch('http://localhost:8000/getallbooks')
+            const response = await fetch(`${API_BASE_URL}/getallbooks/`)
             const data = await response.json()
             setbooksdata(data)
 
