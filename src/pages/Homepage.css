@@ -191,7 +191,7 @@
 .Bookssection{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     padding: 3%;
     gap: 20px;
 }
@@ -392,6 +392,12 @@
     .welcome_image{
         display: none;
     }
+     .herosection {
+         background-position: 70%;
+     }
+     .Bookssection{
+            align-items: center;
+     }
 }
 
 @media screen and (max-width: 850px) {
