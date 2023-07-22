@@ -81,20 +81,20 @@ function SignupPage() {
         
         // Name Validation
 
-        if(fname.length == 0){
+        if(fname.length === 0){
             setUsernameError("Enter First Name"); 
             usernameValidation.current.style.display = "block";
             return;
         } 
-        else if(fname.match(/^[a-zA-Z]+$/)==null){
+        else if(fname.match(/^[a-zA-Z]+$/)===null){
             setUsernameError("Enter Valid first Name"); 
             usernameValidation.current.style.display = "block";
             return;
-        }else if(lname.length == 0){
+        }else if(lname.length === 0){
             setUsernameError("Enter Last Name"); 
             usernameValidation.current.style.display = "block";
             return;
-        }else if(lname.match(/^[a-zA-Z]+$/)==null){
+        }else if(lname.match(/^[a-zA-Z]+$/)===null){
                 setUsernameError("Enter Valid last Name"); 
                 usernameValidation.current.style.display = "block";
                 return;
@@ -105,11 +105,11 @@ function SignupPage() {
 
         //email validation
 
-        if(email.length == 0){
+        if(email.length === 0){
             setEmailError("Enter Email");
             emailValidation.current.style.display = "block";
             return;
-        }else if(email.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/)==null){
+        }else if(email.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/)===null){
             setEmailError("Enter Valid Email");
             emailValidation.current.style.display = "block";
             return;
@@ -124,7 +124,7 @@ function SignupPage() {
         //             <p className='info'>At least 1 Uppercase</p>
         //             <p className='info'>At least 1 Special Character</p>
 
-        if(password.length == 0){
+        if(password.length === 0){
             setPasswordError("Please Enter Password");      //password inccorect
             passwordValidation.current.style.display = "block";
             return;
@@ -132,15 +132,15 @@ function SignupPage() {
             setPasswordError("Password must be atleast 10 characters");      //password inccorect
             passwordValidation.current.style.display = "block";
             return;
-        }else if(password.match(/[A-Z]/)==null){
+        }else if(password.match(/[A-Z]/)===null){
             setPasswordError("Password must contain atleast 1 uppercase");      //password inccorect
             passwordValidation.current.style.display = "block";
             return;
-        }else if(password.match(/[!@#$%^&*]/)==null){
+        }else if(password.match(/[!@#$%^&*]/)===null){
             setPasswordError("Password must contain atleast 1 special character");      //password inccorect
             passwordValidation.current.style.display = "block";
             return;
-        }else if(password != confirmPassword){
+        }else if(password !== confirmPassword){
             setPasswordError("Password and Confirm Password must be same");      //password inccorect
             passwordValidation.current.style.display = "block";
             return;

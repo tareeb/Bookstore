@@ -83,11 +83,11 @@ function LoginPage() {
   
         // email Validation
 
-        if(email.length == 0){
+        if(email.length === 0){
             setemailError("Please Enter email");
             emailValidation.current.style.display = "block";
             return;
-        }else if(email.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/)==null){
+        }else if(email.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/)===null){
             setemailError("Please Enter Valid email"); 
             emailValidation.current.style.display = "block";
             return;
@@ -98,7 +98,7 @@ function LoginPage() {
 
         // Password Validation
 
-        if(password.length == 0){
+        if(password.length === 0){
             setPasswordError("Please Enter Password");
             passwordValidation.current.style.display = "block";
             return;

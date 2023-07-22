@@ -1,6 +1,6 @@
 import './Homepage.css'
 import {Link} from 'react-router-dom';
-import { useState,useRef ,useEffect} from 'react';
+import { useState ,useEffect} from 'react';
 import { API_BASE_URL } from '../apiConfig';
 import {GiUnicorn} from 'react-icons/gi'  
 import {GiSpellBook} from 'react-icons/gi'
@@ -9,7 +9,6 @@ import {BiTimer} from 'react-icons/bi'
 import {RiDoubleQuotesL} from 'react-icons/ri'
 import {AiFillCaretLeft , AiFillCaretRight} from 'react-icons/ai'
 import Bookcard from '../components/bookcard';
-import FlippedBookcard from '../components/flipped_bookcard';
 
 
 function Testimonial({comment , name , position , imagesrc}) {
@@ -22,7 +21,7 @@ function Testimonial({comment , name , position , imagesrc}) {
                 <p>{comment}</p>
             </div>
             <div className='clientinfo'>
-                <img src={imagesrc}></img>
+                <img src={imagesrc} alt='Profile of Person'></img>
                     <div>
                         <h1>{name}</h1>
                         <h2>{position}</h2>
@@ -187,7 +186,9 @@ function Homepage() {
 
             <div className='welcomesection'>
                 <div className='welcome_image'>
-                    <img src='https://preview.colorlib.com/theme/publishingcompany/images/about-1.jpg.webp'></img>
+                    <img src='https://preview.colorlib.com/theme/publishingcompany/images/about-1.jpg.webp'
+                    alt='A Smiling Lady having a book in hand'>
+                    </img>
                 </div>
 
                 <div className='welcome_content'>
@@ -217,7 +218,7 @@ function Homepage() {
                  
             </div>
 
-            <div className='Bookssection'>
+            <div className='Bookssection flipped'>
             { booksdata.slice(4,7).map( (book , index) => {
                         return(
                             <Bookcard

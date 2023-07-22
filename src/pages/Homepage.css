@@ -196,6 +196,16 @@
     gap: 20px;
 }
 
+/* To make second section flipped */
+/* .Bookssection.flipped .Bookcard_image_container{
+    order:2;
+}
+
+.Bookssection.flipped .Bookcard_content{
+    order:1;
+} */
+
+
 
 /* //////////////////////////////////////////////////////// */
 

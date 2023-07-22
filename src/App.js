@@ -10,7 +10,6 @@ import Footer from './components/Footer';
 import Searchpage from './pages/searchpage';
 import Request from './pages/Requestpage';
 import Logout from './pages/Logout';
-import TestPage from './pages/TestPage';
 
 function App() {
   return (
@@ -34,7 +33,6 @@ function App() {
 
             <Route path='/logout' element={<Logout></Logout>} ></Route>
 
-            <Route path='/test' element={<TestPage />}/>
             <Route path='*' element={<p>No Page Found</p>} ></Route>
           </Routes>
        

@@ -56,10 +56,6 @@ function Navbar(){
           }, 1000)
     }
     
-    function loadandtoogle(){
-        togglemenu();
-        loader();
-    }
 
     return(
         <div className='navbar'>
